@@ -30,3 +30,25 @@ for(let span of medBlueSpans){
     span.style.color = "#3C5E73";
 }
 
+// Selecting a group with a CSS selector
+
+let colors = ["#283040" , "#3C5E73", "#7C9EA6", "#D9BCA3", "#F2DCC9"];
+let svgs = document.querySelectorAll("#svgs svg");
+
+console.log(svgs);
+
+// Iterate through the SVG collection and change the color of each
+for(let i = 0; i < svgs.length; i++){
+    svgs[i].style.stroke = colors[i];
+}
+
+//Individual element CSS selector
+document.querySelector(".bold").style.color = "#7C9EA6";
+
+// Changing dom node content
+document.querySelector(".content_list li:first-of-type").textContent = "This is a new list item text";
+
+document.querySelectorAll(".content_list li")[2].innerHTML += " <strong>Delijah</strong>"
+
+// Remove Attribute
+document.querySelector("#remove a").removeAttribute("hidden");
